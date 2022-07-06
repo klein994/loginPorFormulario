@@ -1,0 +1,51 @@
+<h1>Mensajes</h1>
+<br>
+<div class="row mb-2">
+
+    <div class="col-12">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" type="text" class="form-control" placeholder="Nombre">
+
+        <label for="apellido">Apellido</label>
+        <input id="apellido" type="text" class="form-control" placeholder="Apellido">
+
+        <label for="email">Email</label>
+        <input id="email" type="mail" class="form-control" placeholder="Email">
+
+        <label for="edad">edad</label>
+        <input id="edad" type="number" class="form-control" placeholder="Edad">
+
+        <label for="alias">Alias</label>
+        <input id="alias" type="text" class="form-control" placeholder="Alias">
+
+        <label for="avatar">Avatar</label>
+        <select name="avatar" id="avatar" required class="form-control">
+            <option selected disabled value="">Seleccionar avatar</option>
+            <option
+                    value="https://cdn3.iconfinder.com/data/icons/education-209/64/plane-paper-toy-science-school-256.png">
+                avión
+            </option>
+            <option
+                    value="https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-128.png">
+                Globo terráqueo
+            </option>
+            <option
+                    value="https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-128.png">
+                Calculadora
+            </option>
+            <option
+                    value="https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png">
+                Reglas
+            </option>
+        </select>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea name="mensaje" id="mensaje" class="form-control" rows="5"></textarea>
+
+    </div>
+</div>
+
+
+<button id="botonEnviarMensaje" class="btn btn-primary mt-3">Enviar</button>
+<button id="botonEliminarMensajes" class="btn btn-danger mt-3">Eliminar Mensajes</button>
+<hr>

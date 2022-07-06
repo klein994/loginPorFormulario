@@ -1,0 +1,16 @@
+<div class=" p-5">
+{{#if hayMensajes}}
+    <h1 >Mensajes</h1>
+    {{#each array_mensajes}}
+        <div class="row">
+            <span style="color:blue;"><b>{{author.email}}</b>
+            <span style="color:black;"> [{{dateString}}] : </span>
+            <span style="color:green;"> {{text}}</span>
+            <img src="{{author.avatar}}" alt="{{author.email}}" width="50" height="50">
+        </div>
+    {{/each}}
+{{else}}
+    <h3 class="alert alert-danger">No se encontraron Mensajes</h3>
+{{/if}}
+
+</div>

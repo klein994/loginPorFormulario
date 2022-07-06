@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container mt-3 ">
+        <div class="col-md-6 m-auto card shadow">
+            <h1 style="text-align: center" class="mb-5">Login de Usuario</h1>
+            <label class="m-0" for="nombre">Nombre</label>
+            <input class="form-control mt-2" type="text" id="nombre" name="nombre" placeholder="Nombre">
+            <button class="btn btn-primary btn-block mt-3 mb-5" id="btn-login" >Entrar</button>
+        </div>
+    </div>
+</body>
+
+<script>
+    const btnLogin = document.getElementById('btn-login');
+    btnLogin.addEventListener('click', () => {
+        const name = document.getElementById('nombre').value;
+        if (name === '') {
+            alert('Ingrese su nombre');
+        } else {
+            const options = {
+                method: 'POST',
+            };
+            fetch(`/api/login/${name}`, options)
+            .then(response => response.json())
+            .then(data => {
+                if (data.logged) {
+                    window.location.href = '/';
+                } else {
+                    alert('Usuario no encontrado');
+                }
+            })
+            .catch(error => console.log(error));
+        }
+    });
+</script>
+
+</html>

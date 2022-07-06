@@ -1,0 +1,31 @@
+<h1>Productos</h1>
+<br>
+<div class="form-group">
+    <label for="title"><b>Nombre</b></label>
+    <input id="title" class="form-control" type="text" name="title">
+</div>
+<div class="form-group">
+    <label for="price"><b>Precio</b></label>
+    <input id="price" class="form-control" type="text" name="price">
+</div>
+<div class="form-group">
+    <label for="thumbnail"><b>Imagen</b></label>
+
+    <select name="thumbnail" id="thumbnail" required class="form-control">
+        <option selected disabled value="">Seleccionar imagen</option>
+        <option
+                value="https://cdn3.iconfinder.com/data/icons/education-209/64/plane-paper-toy-science-school-256.png">
+            avión</option>
+        <option
+                value="https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-128.png">
+            Globo terráqueo</option>
+        <option
+                value="https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-128.png">
+            Calculadora</option>
+        <option
+                value="https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png">
+            Reglas</option>
+    </select>
+</div>
+<button id="botonEnviar" class="btn btn-primary mt-3 mb-5">Enviar</button>
+<button id="botonEliminarProductos" class="btn btn-danger mt-3 mb-5">Eliminar Productos</button>
